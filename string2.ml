@@ -78,3 +78,11 @@ let rec ignore_char ic n =
     ignore (input_char ic) ;
     ignore_char ic (n - 1)
   end
+
+let get_content f =
+  let ic = open_in f in
+  let n = in_channel_length ic in
+  let s = String.create n in
+    really_input ic s 0 n;
+    close_in ic;
+    (s)
