@@ -28,7 +28,13 @@ install:
 	 cp string2.cmi /usr/local/lib/ocaml/
 	 cp string2.cmx /usr/local/lib/ocaml/
 	 cp string2.cmxa /usr/local/lib/ocaml/
-#	 cp string2.mli /usr/local/lib/ocaml/
+
+uninstall:
+	 rm /usr/local/lib/ocaml/string2.a 
+	 rm /usr/local/lib/ocaml/string2.cma 
+	 rm /usr/local/lib/ocaml/string2.cmi 
+	 rm /usr/local/lib/ocaml/string2.cmx 
+	 rm /usr/local/lib/ocaml/string2.cmxa 
 
 clean:
 	rm -rf  $(LIB) *.cm* *.o *.a test *~
