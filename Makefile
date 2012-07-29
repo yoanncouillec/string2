@@ -22,5 +22,13 @@ testopt: string2.cmxa test.o
 	ocamlopt $^ -o $@
 	./$@ azertyuiop
 
+install:
+	 cp string2.a /usr/local/lib/ocaml/
+	 cp string2.cma /usr/local/lib/ocaml/
+	 cp string2.cmi /usr/local/lib/ocaml/
+	 cp string2.cmx /usr/local/lib/ocaml/
+	 cp string2.cmxa /usr/local/lib/ocaml/
+#	 cp string2.mli /usr/local/lib/ocaml/
+
 clean:
 	rm -rf  $(LIB) *.cm* *.o *.a test *~
